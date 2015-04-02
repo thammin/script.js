@@ -79,6 +79,8 @@
     }
     el.async = 1
     el.src = urlArgs ? path + (path.indexOf('?') === -1 ? '?' : '&') + urlArgs : path;
+    // set crossorigin default to `anonymous`
+    el.crossOrigin = 'anonymous';
     head.insertBefore(el, head.lastChild)
   }
 
